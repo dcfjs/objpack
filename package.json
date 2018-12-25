@@ -1,12 +1,16 @@
 {
   "name": "@dcfjs/objpack",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": "git@github.com:dcfjs/objpack.git",
   "author": "dengyun <dengyun@meideng.net>",
+  "private": false,
   "license": "MIT",
   "scripts": {
-    "test": "mocha -r ts-node/register src/test/**.ts"
+    "test": "mocha -r ts-node/register --reporter nyan src/test/**.ts",
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.5",
